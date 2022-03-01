@@ -1,0 +1,29 @@
+.container {
+    @include container;
+}
+
+.free-delivery{
+    padding: 80px 0 70px;
+    background-color: #212121;
+    color: #FFFFFF; 
+    font-family: 'Montserrat', sans-serif;
+}
+
+.free-delivery h2{
+    margin: 0;
+    margin-bottom: 23px;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 37px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+.free-delivery p {
+    margin: 0;
+    font-weight: 300;
+    font-size: 21px;
+    line-height: 26px;
+    text-align: center; 
+}

@@ -1,0 +1,140 @@
+.container {
+    @include container;
+}
+
+.header-wrap{
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.03em;
+    display: flex;
+    justify-content:space-between;
+    padding-top: 50px;
+    align-items: center;
+}
+
+.nav-right, .nav-left{
+    display: flex;
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+
+    @include breakpoint (lg){
+        display: none;
+    }
+}
+
+.nav-img{
+    @include breakpoint (xs){
+        width: 140px;
+    }
+}
+
+.nav-link{
+    text-decoration: none;
+    color: #212121;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.nav-basket{
+    position: relative;
+    background: #D7B399;
+    padding: 12px 20px;
+    font-weight: bold;
+    font-size: 12px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.nav-basket::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 47px;
+	border: 20px solid transparent;
+    border-right: 23px solid #D7B399;
+}
+.basket-group{
+    margin: o auto;
+    padding-left: 70px;
+    height: 30px;
+    background-repeat: no-repeat;
+}
+
+.nav-tel{
+    display: none;
+    @include breakpoint (lg){
+        display: block;
+        width: 50px;
+        height: 20px;
+        position: relative;
+    }
+     .line-top{
+        top: 1px;
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background-color: #000;
+     }
+    .line{
+        top: 45%;
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background-color: #000;
+    }
+    .line-button{
+        bottom: 0;
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background-color: #000;
+    }
+    .active1{
+        transform: rotate(-45deg);
+    }
+    .active2{
+        transform: rotate(45deg);
+        top: 8px;
+    }
+    .active3{
+        display: none;
+    }
+}
+
+
+.nav-menu{
+    display: none;
+    box-shadow: 1px 0 15px 2px #644444;
+
+    @include breakpoint (lg){
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        text-align: center;
+        height: 100vh;
+        width: 250px;
+        position: absolute;
+        left: -250px;
+        top: 0;
+        background-color: #D7B399;
+        z-index: 100;
+    }
+
+    .nav-menu-list{
+        list-style-type: none;
+        padding-left: 0;
+    }
+    .nav-menu-list li{
+        padding: 20px 0;
+    }
+    .nav-menu-link{
+        text-decoration: none;
+        color: #000;
+    }
+}
+.active4{
+    left: 0;
+    transition: left 1s cubic-bezier(0.2, 1.04, 0.34, 0.33);
+}

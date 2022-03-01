@@ -1,0 +1,64 @@
+.container {
+    @include container;
+}
+@include breakpoint (lg) {
+    text-align: center;
+}
+
+.footer-wrap{
+    padding: 30px 0 30px;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Montserrat', sans-serif;
+
+    .footer-logo{
+        flex: 0 0 30%;
+
+        @include breakpoint (lg) {
+            flex: 0 0 100%;
+        }
+    }
+    .footer-nav{
+        display: flex;
+        flex: 0 0 70%;
+        justify-content: space-between;
+
+        @include breakpoint (md) {
+        flex-wrap: wrap;
+        }
+
+        @include breakpoint (lg) {
+            flex: 0 0 100%;
+            justify-content: space-between;
+            text-align: center;
+        }
+    }
+    }
+
+.footer-nav ul{
+    list-style-type: none;
+    padding-left: 0;
+    @include breakpoint (md) {
+        flex: 0 0 50%;
+    }
+}
+
+.footer-nav a {
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 22px;
+    color: #CBCFD4;
+}
+
+.footer-nav li{
+    color: #fff;
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 12px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.icon{
+    margin-right: 10px;
+}

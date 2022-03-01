@@ -1,0 +1,101 @@
+.container {
+    @include container;
+}
+
+.sail{
+    background-color: $bacgground;
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 133px;
+}
+
+.sail-wrap{
+    display: flex;
+    padding-bottom: 25px;
+
+    @include breakpoint (lg) {
+        flex-wrap: wrap;
+    }
+}
+
+.sail-right, .sail-left{
+    width: 50%;
+
+    @include breakpoint (lg) {
+        width: 100%;
+    }
+}
+
+.sail-right{
+
+    @include breakpoint (lg) {
+        text-align: center;
+    }
+
+    p{
+        margin: 0;
+        margin-bottom: 30px;
+        font-size: 30px;
+        line-height: 37px;
+        letter-spacing: 0.02em;
+    }
+
+    h1{
+        margin: 0;
+        margin-bottom: 55px;
+        font-weight: bold;
+        font-size: 55px;
+        line-height: 67px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+    }
+    button{
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: 0.03em;
+        color: #FFFFFF;
+        text-transform: uppercase;
+        padding: 18px 30px;
+        background: #D7B399;
+        border: none;
+    }
+}
+
+.sail-left{
+    position: relative;
+
+    @include breakpoint (lg) {
+        width: 600px;
+        margin: 50px auto 0;
+        padding-bottom: 50px;
+    }
+
+    .left-image{
+    width: 100%;
+    max-width: 580px;
+}
+}
+
+.sail-group{
+    position: absolute;
+    right: 0;
+    top: 27px;
+
+    .sail-action{
+        margin: 0;
+        font-weight: bold;
+        font-size: 42px;
+        line-height: 51px;
+        letter-spacing: 0.02em;
+        color: #D84033;
+    }
+
+    p{        
+        margin: 0;
+        margin-bottom: 15px;
+        text-align: right;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 29px;
+        letter-spacing: 0.05em;
+    }
+}
